@@ -1,4 +1,5 @@
 require 'rails_helper'
+#require 'pry'
 
 describe 'Route to view' do
   it 'has an index page' do
@@ -26,6 +27,7 @@ describe 'form page' do
     visit new_coupon_path
 
     fill_in 'coupon[coupon_code]', with: "YAYFREE"
+    #binding.pry
     fill_in 'coupon[store]', with: "Hobby Lobby"
 
     click_on "Submit Coupon"

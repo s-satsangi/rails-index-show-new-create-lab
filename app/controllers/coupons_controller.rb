@@ -9,9 +9,15 @@ class CouponsController < ApplicationController
     end
 
     def new
-        byebug
+       # byebug
         
     end
 
+    def create
+        #byebug
+        new_coupon = Coupon.create(store: params[:store],
+                                   coupon_code: params[:coupon_code])
+        redirect_to coupon_path(new_coupon.id)
+    end
 
 end
